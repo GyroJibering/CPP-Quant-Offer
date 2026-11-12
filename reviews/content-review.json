@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "kind": "self-review",
-  "reviewer": "Author subagents and coordinating agent; AI-assisted self-review, no external independent reviewer",
-  "reviewedAt": "2026-09-19",
+  "reviewer": "AI-assisted self-review; existing review evidence retained; no independent external reviewer",
+  "reviewedAt": "2026-11-12",
   "verdict": "pass",
-  "scope": "Thirty-seven tutorials, 603 derived questions and thirty-seven C++ demos; per-topic technical acceptance with rendering evidence in the report",
-  "report": "docs/ROADMAP_REVIEW_2026-09-19.md",
+  "scope": "Existing 37 tutorials retain prior evidence; additions: 2 tutorials, 39 questions and 2 C++ demos; total 39 tutorials and 642 questions",
+  "report": "docs/NOTES_REVIEW_2026-11-12.md",
   "checks": [
     "language and platform boundaries",
     "dual SPSC synchronization chains",
@@ -88,6 +88,10 @@
     "content/topics/design/price-ladder.md": "3b2e6a5bf8fd8f6a0244e7c6985d75d4172789b6d355c2dbfd2c45313ac02127",
     "examples/price-ladder.cpp": "de40242345cd0309f6f7198da2750f93fa5d84d996659b4edd8b57f430e699b4",
     "content/topics/design/timer-wheel.md": "ffa8e5dc00880f835bb9e891ef46403eb52f0627482fd786c66e8b7db10ac335",
-    "examples/timer-wheel.cpp": "d4a3d84862ec82e34bbf10bef99d2de5d5c05c545aff5ba5959b340f1e3a59d3"
+    "examples/timer-wheel.cpp": "d4a3d84862ec82e34bbf10bef99d2de5d5c05c545aff5ba5959b340f1e3a59d3",
+    "content/topics/cpp/cpp-quant-core-notes.md": "ed05fd7150765158b0acc37bbf37dcf567f81769f0b53f85f51215c4c33ac4e0",
+    "content/topics/optimization/portfolio-optimization-qd.md": "6e7c9eb1ae5758ff15155ebcec07760111f26d62675b7eeb93680dff8baebb9d",
+    "examples/cpp-quant-core-notes.cpp": "12187862b34faefa5a58ea27611eceacae763bf2545a88f0b39b3b12b0f45837",
+    "examples/portfolio-optimization-qd.cpp": "c5e6c7c61d6812b4c73ee22f6b2889cfa3d7e587aa035358c83bac6213ceeaa0"
   }
 }

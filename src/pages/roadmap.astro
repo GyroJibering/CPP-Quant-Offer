@@ -14,7 +14,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <h1>
       从语言，到交易系统<span class="heading-dot">.</span>
     </h1>
-    <p class="intro">7 个领域，21 个知识方向。按当前可读专题查看覆盖范围，再沿前置知识安排学习。</p>
+    <p class="intro">
+      {categories.length} 个领域，{categories.reduce((n, category) => n + category.areas.length, 0)}
+      个知识方向。按当前可读专题查看覆盖范围，再沿前置知识安排学习。
+    </p>
   </div>
   <div class="learning-path">
     <strong>建议主线</strong>
@@ -58,6 +61,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <h2>建议阅读与复查顺序</h2>
     <ol>
       <li>
+        <strong>总览复习：</strong>
+        <a href={`${base}/topics/cpp-quant-core-notes/`}>C++ Quant Developer 核心知识速记</a>
+        ，串联对象、多态、Cache 与并发，再进入各专题。
+      </li>
+      <li>
         <strong>语言基线：</strong>RAII / move、对象生命周期、vector 失效规则、模板与
         concepts、链接与 ABI。
       </li>
@@ -73,6 +81,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </li>
       <li>
         <strong>编码专项：</strong>LRU、内存池、ring buffer、price ladder、定时器和事件回放。
+      </li>
+      <li>
+        <strong>组合优化：</strong>
+        <a href={`${base}/topics/portfolio-optimization-qd/`}>
+          收益风险建模、KKT、内点法与求解排障
+        </a>
+        ，再将经过校验的目标权重交给交易链路。
       </li>
     </ol>
     <p>

@@ -31,6 +31,11 @@ export const categories = [
     areas: ['Market Data', 'Order Book', 'Matching Engine', 'Feed Handler', 'Trading System'],
   },
   { id: 'design', name: '系统设计与算法', areas: ['System Design', 'Algorithm Coding'] },
+  {
+    id: 'optimization',
+    name: '组合优化与求解器',
+    areas: ['Portfolio Optimization', 'Numerical Optimization', 'Solver Engineering'],
+  },
 ];
 export const roles = [
   'C++ Developer',

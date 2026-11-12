@@ -10,14 +10,14 @@
 
 | 层次      | 含义                                        | 维护位置                            |
 | --------- | ------------------------------------------- | ----------------------------------- |
-| Category  | 稳定的一级导航，共 7 组                     | `src/data/taxonomy.mjs`             |
-| Area      | 领域内的知识方向，共 21 个                  | 同上                                |
+| Category  | 稳定的一级导航，共 8 组                     | `src/data/taxonomy.mjs`             |
+| Area      | 领域内的知识方向，共 24 个                  | 同上                                |
 | Topic     | 可独立学习、测试、审查的窄专题              | `content/topics/<category>/<id>.md` |
 | Question  | 具有独立 ID、层级、答案、评分点和来源的题目 | topic frontmatter                   |
 | Demo      | 经过编译运行的可执行实验                    | `examples/<id>.cpp`                 |
 | Reference | 论据来源，和面试来源分开                    | topic.references                    |
 
-一级分类：C++ 语言与工具链；内存模型与并发；Linux 与操作系统；网络与 I/O；性能与低延迟；交易基础设施；系统设计与算法。taxonomy 包含用户要求的全部 21 个方向。没有示范文章的领域显示“待建设”，不发布空文章或占位题。
+一级分类：C++ 语言与工具链；内存模型与并发；Linux 与操作系统；网络与 I/O；性能与低延迟；交易基础设施；系统设计与算法；组合优化与求解器。taxonomy 包含 24 个方向，组合优化模块覆盖 Portfolio Optimization、Numerical Optimization 与 Solver Engineering。没有示范文章的领域显示“待建设”，不发布空文章或占位题。
 
 页面按知识分类、标签、难度和学习状态筛选，随机面试按专题与层级筛选。旧版岗位与来源字段暂留在内容 schema 中，以兼容已有文章与审查记录；页面不再展示岗位、公司分类。
 
