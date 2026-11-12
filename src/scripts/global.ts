@@ -1,5 +1,6 @@
 import { loadProgress, saveProgress, notify } from './progress';
 import { parseProgress } from '../lib/study.mjs';
+import './theme';
 
 document.querySelector('#import-trigger')?.addEventListener('click', () => {
   document.querySelector<HTMLInputElement>('#import-progress')?.click();

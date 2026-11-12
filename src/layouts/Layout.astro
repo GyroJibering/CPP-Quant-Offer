@@ -22,7 +22,24 @@ const topics = await publishedTopics();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      (() => {
+        let preference;
+        try {
+          preference = localStorage.getItem('cpp-quant-offer:theme');
+        } catch {
+          // System colors remain available when browser storage is blocked.
+        }
+        const explicit = preference === 'light' || preference === 'dark';
+        document.documentElement.dataset.themePreference = explicit ? preference : 'system';
+        document.documentElement.dataset.theme = explicit
+          ? preference
+          : matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+      })();
+    </script>
     <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
     <title>{title} · CPP-Quant-Offer</title>
   </head>
@@ -50,6 +67,36 @@ const topics = await publishedTopics();
       >
         GitHub ↗
       </a>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="切换到深色模式"
+        hidden
+      >
+        <svg
+          class="theme-moon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          aria-hidden="true"
+        >
+          <path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z" />
+        </svg>
+        <svg
+          class="theme-sun"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+        </svg>
+        <span class="theme-label">深色</span>
+      </button>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="sidebar">
         目录
       </button>
